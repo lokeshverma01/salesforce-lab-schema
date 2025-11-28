@@ -2,12 +2,13 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Salesforce Account REST API",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "description": "REST API to fetch Salesforce Account details"
   },
   "servers": [
     {
-      "url": "https://orgfarm-a0f308c8b8-dev-ed.develop.my.salesforce.com/services/apexrest",
-      "description": "Org 2 API Server"
+      "url": "https://REPLACE_WITH_ORG2_INSTANCE/services/apexrest",
+      "description": "Salesforce Org 2 API Server"
     }
   ],
   "paths": {
@@ -15,8 +16,10 @@
       "get": {
         "operationId": "getAccount",
         "summary": "Get Account",
+        "description": "Returns the first available Account with basic details",
         "responses": {
           "200": {
+            "description": "Account object returned successfully",
             "content": {
               "application/json": {
                 "schema": {
@@ -33,13 +36,33 @@
     "schemas": {
       "Account": {
         "type": "object",
+        "title": "Account",
         "properties": {
-          "Id": { "type": "string" },
-          "Name": { "type": "string" },
-          "Phone": { "type": "string", "nullable": true },
-          "Website": { "type": "string", "nullable": true }
+          "Id": {
+            "type": "string",
+            "description": "Account unique identifier",
+            "example": "001xx000003DHP"
+          },
+          "Name": {
+            "type": "string",
+            "description": "Account name",
+            "example": "Acme Corp"
+          },
+          "Phone": {
+            "type": "string",
+            "description": "Account phone number",
+            "example": "+1 415 555 1234",
+            "nullable": true
+          },
+          "Website": {
+            "type": "string",
+            "description": "Account website",
+            "example": "https://www.acme.com",
+            "nullable": true
+          }
         },
-        "required": ["Id", "Name"]
+        "required": ["Id", "Name"],
+        "additionalProperties": false
       }
     }
   }
