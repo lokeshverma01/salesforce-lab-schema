@@ -34,12 +34,31 @@
       "Account": {
         "type": "object",
         "properties": {
-          "Id": { "type": "string" },
-          "Name": { "type": "string" },
-          "Phone": { "type": "string", "nullable": true },
-          "Website": { "type": "string", "nullable": true }
+          "attributes": {
+            "type": "object",
+            "description": "Attributes wrapper (ignored)",
+            "additionalProperties": true
+          },
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "Website": {
+            "type": "string",
+            "nullable": true
+          }
         },
-        "required": ["Id", "Name"]
+        "required": [
+          "Id",
+          "Name"
+        ],
+        "additionalProperties": false
       }
     }
   }
