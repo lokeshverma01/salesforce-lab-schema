@@ -14,7 +14,7 @@
   "paths": {
     "/api/Account": {
       "get": {
-        "operationId": "getAccounts",
+        "operationId": "getAccount",
         "summary": "Get Account",
         "description": "Returns the first available Account with basic details",
         "responses": {
@@ -38,7 +38,7 @@
         "type": "object",
         "title": "Account",
         "properties": {
-          "Id": {
+          "Ids": {
             "type": "string",
             "description": "Account unique identifier",
             "example": "001xx000003DHP"
