@@ -14,7 +14,7 @@
   "paths": {
     "/api/Account": {
       "get": {
-        "operationId": "getAccount",
+        "operationId": "getAccounts",
         "summary": "Get Account",
         "description": "Returns the first available Account with basic details",
         "responses": {
