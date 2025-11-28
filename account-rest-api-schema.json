@@ -34,17 +34,12 @@
       "Account": {
         "type": "object",
         "properties": {
-          "attributes": {
-            "type": "object",
-            "additionalProperties": true
-          },
           "Id": { "type": "string" },
           "Name": { "type": "string" },
           "Phone": { "type": "string", "nullable": true },
           "Website": { "type": "string", "nullable": true }
         },
-        "required": ["Id", "Name"],
-        "additionalProperties": true
+        "required": ["Id", "Name"]
       }
     }
   }
