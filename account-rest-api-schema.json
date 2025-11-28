@@ -36,29 +36,15 @@
         "properties": {
           "attributes": {
             "type": "object",
-            "description": "Attributes wrapper (ignored)",
             "additionalProperties": true
           },
-          "Id": {
-            "type": "string"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Phone": {
-            "type": "string",
-            "nullable": true
-          },
-          "Website": {
-            "type": "string",
-            "nullable": true
-          }
+          "Id": { "type": "string" },
+          "Name": { "type": "string" },
+          "Phone": { "type": "string", "nullable": true },
+          "Website": { "type": "string", "nullable": true }
         },
-        "required": [
-          "Id",
-          "Name"
-        ],
-        "additionalProperties": false
+        "required": ["Id", "Name"],
+        "additionalProperties": true
       }
     }
   }
