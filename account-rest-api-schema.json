@@ -63,7 +63,7 @@
         },
         "required": ["Id", "Name"],
         "Active__c": {
-                  "type": "object"
+                  "type": "string"
                 }
       }
     }
