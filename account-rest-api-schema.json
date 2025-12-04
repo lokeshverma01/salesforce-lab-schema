@@ -38,7 +38,7 @@
         "type": "object",
         "title": "Account",
         "properties": {
-          "Id": {
+          "Idss": {
             "type": "string",
             "description": "Account unique identifier",
             "example": "001xx000003DHP"
