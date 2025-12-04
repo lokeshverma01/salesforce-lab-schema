@@ -62,8 +62,8 @@
           }
         },
         "required": ["Id", "Name"],
-        "Active__c": {
-                  "type": "string"
+        "additionalProperties": {
+                  "type": "object"
                 }
       }
     }
